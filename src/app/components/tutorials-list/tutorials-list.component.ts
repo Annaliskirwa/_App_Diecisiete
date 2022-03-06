@@ -45,5 +45,15 @@ export class TutorialsListComponent implements OnInit {
       console.log(error);
     });
   }
+  searchTitle():void {
+    this.currentTutorial = {};
+    this.currentIndex = -1;
+    this.tutorialService.findByTitle(this.title).subscribe(data => {this.tutorials = data;
+    console.log(data);
+  },
+  error => {
+    console.log(error);
+  })
+  }
 
 }
