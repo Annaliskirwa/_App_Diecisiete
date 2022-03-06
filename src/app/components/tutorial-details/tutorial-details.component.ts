@@ -51,5 +51,15 @@ export class TutorialDetailsComponent implements OnInit {
       console.log(error);
     });
   }
+  updateTutorial():void{
+    this.message = '';
+    this.tutorialService.update(this.currentTutorial.id, this.currentTutorial).subscribe(response =>{
+      console.log(response);
+      this.message = response.message ? response.message : 'This tutorial was succesfully updated'
+    },
+    error =>{
+      console.log(error);
+    });
+  }
 
 }
