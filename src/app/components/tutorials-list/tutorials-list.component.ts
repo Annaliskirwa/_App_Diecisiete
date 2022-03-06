@@ -27,5 +27,10 @@ export class TutorialsListComponent implements OnInit {
     console.log(error);
   });
   }
+  refreshList():void{
+    this.retrieveTutorials();
+    this.currentTutorial = {};
+    this,this.currentIndex = -1;
+  }
 
 }
