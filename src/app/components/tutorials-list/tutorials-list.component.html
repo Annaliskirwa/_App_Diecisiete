@@ -28,6 +28,6 @@
             </div>
             <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">Edit</a>
         </div>
-        <div></div>
+        <div *ngIf = "!currentTutorial"><br><p>Please click on a tutorial</p></div>
     </div>
 </div>
