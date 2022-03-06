@@ -14,9 +14,18 @@ export class TutorialsListComponent implements OnInit {
   currentIndex = -1;
   title = '';
 
-  constructor() { }
+  constructor(private tutorialService: TutorialService) { }
 
   ngOnInit(): void {
+    this.retrieveTutorials();
+  }
+  retrieveTutorials(): void{
+    this.tutorialService.getAll().subscribe(data => {this.tutorials = data;
+    console.log(data);
+  },
+  error => {
+    console.log(error);
+  });
   }
 
 }
