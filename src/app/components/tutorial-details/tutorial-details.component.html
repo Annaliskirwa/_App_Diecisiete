@@ -18,5 +18,11 @@
         <button class="badge badge-primary mr-2" *ngIf="currentTutorial.published" (click)="updatePublished(false)">Unpublish</button>
         <button class="badge badge-primary mr-2" *ngIf="!currentTutorial.published" (click)="updatePublished(true)">Publish</button>
         <button class="badge badge-danger mr-2" (click)="deleteTutorial()">Delete</button>
+        <button type="submit" class="badge badge-success mb-2" (click)="updateTutorial()">Update</button>
+        <p>{{message}}</p>
+    </div>
+    <div *ngIf="!currentTutorial.id">
+        <br>
+        <p>Ooops! You cannot access this tutorial..</p>
     </div>
 </div>
