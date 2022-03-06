@@ -10,5 +10,13 @@ const baseUrl = 'http://127.0.0.1:8000/api/tutorials';
 })
 export class TutorialService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
+  getAll():Observable<Tutorial[]>{
+    return this.http.get<Tutorial[]>(baseUrl);
+  }
+  get(id:any):Observable<Tutorial>{
+    return this.http.get(`${baseUrl}/${id}`);
+  }
 }
