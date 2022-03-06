@@ -11,5 +11,9 @@
             </div>
             <button (click)="saveTutorial()" class = "btn btn-success">Submit</button>
         </div>
+        <div *ngIf="submitted">
+            <h4>The tutorial was submitted succesfully</h4>
+            <button class = "btn btn-success" (click)="newTutorial()">Add</button> 
+        </div>
     </div>
 </div>
