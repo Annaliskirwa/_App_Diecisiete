@@ -36,5 +36,14 @@ export class TutorialsListComponent implements OnInit {
     this.currentTutorial = tutorial;
     this.currentIndex = index;
   }
+  removeAllTutorials():void{
+    this.tutorialService.deleteAll().subscribe(response => {
+      console.log(response);
+      this.refreshList();
+    },
+    error => {
+      console.log(error);
+    });
+  }
 
 }
