@@ -35,5 +35,21 @@ export class TutorialDetailsComponent implements OnInit {
     console.log(error);
   });
   }
-  
+  updatePublished(status:boolean):void{
+    const data = {
+      title: this.currentTutorial.title,
+      description: this.currentTutorial.description,
+      published: status
+    };
+    this.message = '';
+    this.tutorialService.update(this.currentTutorial.id, data).subscribe(response => {
+      this.currentTutorial.published = status;
+      console.log(response);
+      this.message = response.message ? response.message : "The status of the tutorial was updated succesfully";
+    },
+    error => {
+      console.log(error);
+    });
+  }
+
 }
