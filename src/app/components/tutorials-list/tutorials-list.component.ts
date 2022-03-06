@@ -32,5 +32,9 @@ export class TutorialsListComponent implements OnInit {
     this.currentTutorial = {};
     this,this.currentIndex = -1;
   }
+  setActiveTutorial(tutorial:Tutorial, index:number): void{
+    this.currentTutorial = tutorial;
+    this.currentIndex = index;
+  }
 
 }
