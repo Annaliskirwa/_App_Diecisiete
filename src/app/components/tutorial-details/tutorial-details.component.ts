@@ -61,5 +61,14 @@ export class TutorialDetailsComponent implements OnInit {
       console.log(error);
     });
   }
+  deleteTutorial():void{
+    this.tutorialService.delete(this.currentTutorial.id).subscribe(response => {
+      console.log(response);
+      this.router.navigate(['/tutorials']);
+    },
+    error =>{
+      console.log(error);
+    });
+  }
 
 }
