@@ -1,1 +1,11 @@
-<p>tutorial-details works!</p>
+<div>
+    <div *ngIf="currentTutorial.id" class="edit-form">
+        <h4>Tutorial</h4>
+        <form>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" [(ngModel)]="currentTutorial.title" name="title">
+            </div>
+        </form>
+    </div>
+</div>
