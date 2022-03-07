@@ -4,7 +4,7 @@
 ## Description  
 This is a web application where users can create and view tutorials written by others.
 A user can publish the tutorial, update it, edit it or delete it. 
-Once can also search for a tutorial.  
+One can also search for a tutorial.  
   
  ## Features
 As a user of this web application you'll be able to:  
