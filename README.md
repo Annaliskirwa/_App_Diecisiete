@@ -34,7 +34,7 @@ There are no known bugs so far
 * CSS
 * Typescript
 * Bootstrap   
-* Tutorial API
+* Tutorial <a href = "https://anntutorial.herokuapp.com/api/tutorials">API </a>
 ## Support and contact details
 In case of any problem while interacting with the web application, reach out to me at annaliskirwa@gmail.com
 ### License.
